@@ -28,14 +28,17 @@ public class FaltaService {
 		Disciplina disciplina = new Disciplina();
 		disciplina.setCodigo(faltaDTO.getDisciplina());
 		
-		//Nao sei pq mas a data vem como um dia anterior
 		Date diaSeguinte =  new Date(faltaDTO.getDataFalta().getTime() + 24*60*60*1000);
 		
 		
 		FaltaId id = new FaltaId();
+		id.setAluno(aluno);
+		id.setDataFalta(diaSeguinte);
+		id.setDisciplina(disciplina);
 		
 		Falta falta = new Falta();
-		
+		falta.setId(id);
+		falta.setPresenca(faltaDTO.getQtdePresenca());
 		return falta;
 	}
 	

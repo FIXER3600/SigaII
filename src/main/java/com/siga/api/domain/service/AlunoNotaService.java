@@ -52,8 +52,10 @@ public class AlunoNotaService {
 		id.setAvaliacao(avaliacao);
 		
 		
-		System.out.println(aluno.getNota());
+		
 		Notas n = new Notas();
+		n.setId(id);
+		n.setNota(aluno.getNota());
 		
 		notaRepository.save(n);
 

@@ -3,22 +3,16 @@ INSERT INTO Curso(Nome)
 VALUES ('ADS'),
 		('COMEX')
 GO
-SELECT * FROM Curso
 
 INSERT INTO Aluno(Nome, CodigoCurso)
-VALUES ('Alicia Santos', 1),
-	   ('Karine Santos', 1),
-	   ('Leonardo Santos',1),
-	   ('Adriano Silva', 2),
-	   ('Roberto Silva', 2),
-	   ('Gustavo Araujo', 2),
-	   ('Narciso', 2)
+VALUES ('Lucas Akira', 1),
+	   ('Guilherme Barros', 1),
+	   ('Gabriel Fernandez',1),
+	   ('Victor Zamora', 1),
+	   ('Walison Vitorio', 1),
+	   ('Vinicius Gadelha', 1),
+	   ('Eloy Neto', 2)
 GO
-
-SELECT * FROM Aluno
-
-
-
 
 INSERT INTO Disciplina(CodigoCurso, Codigo, Nome, Sigla, Turno, NumAulas)
 VALUES (1, '4203-010', 'Arquitetura e Organização de Computadores', 'AOC', 'T', '4'),
@@ -29,8 +23,6 @@ VALUES (1, '4203-010', 'Arquitetura e Organização de Computadores', 'AOC', 'T', 
 	   (1,'4213-013', 'Sistemas Operacionais I', 'SOI', 'N', '4'),
 	   (1,'4233-005', 'Laboratório de Banco de Dados', 'LBD', 'T', '4'),
 	   (2,'5005-220', 'Métodos Para a Produção do Conhecimento', 'MPC', 'T', '4')
-
-
 GO
 
 SELECT * FROM Disciplina
@@ -99,24 +91,22 @@ SELECT * FROM Avaliacao
 
 
 INSERT INTO Aluno_Disciplina(RaAluno, CodigoDisciplina)
-values (1002, '4203-010'),
-		(1003, '4203-010'),
-		(1004, '4233-005'),
-		(1005, '4208-010'),
-		(1006, '4213-013'),
-		(1007, '4213-013'),
-		(1001, '5005-220')
+values 
+		(2009,'4208-010'),
+		(2010,'4208-010'),
+		(2011,'4208-010'),
+		(2013,'4208-010'),
+		(2014,'4208-010'),
+		(2009, '4203-010'),
+		(2010, '4203-010'),
+		(2011, '4233-005'),
+		(2012, '4208-010'),
+		(2013, '4213-013'),
+		(2014, '4213-013'),
+		(2015, '5005-220')
 
 INSERT INTO Aluno_Disciplina(RaAluno, CodigoDisciplina)
-values
-		--(1004, '4203-010'),
-		--(1005, '4203-010'),
-		--(1006, '4203-010'),
-		--(1007, '4203-010'),
-		(1001, '4203-010')
-
-INSERT INTO Aluno_Disciplina(RaAluno, CodigoDisciplina)
-values (1002, '4213-003'),
+values (2010, '4213-003')
 		
 
 SELECT * FROM Aluno_Disciplina
@@ -125,14 +115,49 @@ SELECT * FROM Aluno_Disciplina
 
 
 INSERT INTO Notas(RaAluno, CodigoAvaliacao)
-VALUES (1001, 33),
-       (1003, 32),
-       (1004, 32),
-	   (1005, 32),  
-	   (1006, 32), 
-	   (1007, 32),
-	   (1001, 32)
+VALUES 
+		(2009, 1),
+       (2009, 2),
+       (2009, 3),
+	   (2010, 1),  
+	   (2010, 2), 
+	   (2010, 3),
+	   (2011, 1),  
+	   (2011, 2), 
+	   (2011, 3),
+	   (2012, 1),  
+	   (2012, 2), 
+	   (2012, 3),
+	   (2013, 1),  
+	   (2013, 2), 
+	   (2013, 3),
+	   (2014, 1),  
+	   (2014, 2), 
+	   (2014, 3),
+	   (2015, 24),
+	   (2015,25),
+       (2009, 4),
+       (2009, 5),
+       (2009,6),
+	   (2010, 4),  
+	   (2010, 5), 
+	   (2010, 6),
+	   (2011, 4),  
+	   (2011, 5), 
+	   (2011, 6),
+	   (2012, 4),  
+	   (2012, 5), 
+	   (2012, 6),
+	   (2013, 4),  
+	   (2013, 5), 
+	   (2013, 6),
+	   (2014, 4),  
+	   (2014, 5), 
+	   (2014, 6)
+	  
 GO
+
+SELECT * FROM Avaliacao
 
 SELECT * FROM Notas
 

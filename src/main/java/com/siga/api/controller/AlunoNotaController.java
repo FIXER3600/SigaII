@@ -33,6 +33,7 @@ public class AlunoNotaController {
 		System.out.println(codigoAvaliacao);
 		
 		for(AlunoNota an : lista) {
+			System.out.println(an.getNome());
 			System.out.println(an.getRa());
 			alunoNotaService.atualizaNotaAluno(an, codigoAvaliacao);
 		}
