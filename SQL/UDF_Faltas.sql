@@ -115,8 +115,7 @@ begin
 				set @charFalta = 'PPPP'
 			end
 
-			--IF semanas // bosta de query dinamica q n funciona nesta merda
-	
+			--IF semanas // 
 			if(@contadorAulasDadas = 1)
 			begin
 				update @alunos_falta set semana1 = @charFalta where ra_aluno = @Ra
